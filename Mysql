@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS `agenda`.`tb_contatos` ;
+
+CREATE TABLE IF NOT EXISTS `agenda`.`tb_contatos` (
+  `id_Contatos` INT NOT NULL AUTO_INCREMENT,
+  `Nome_Contatos` VARCHAR(100) NOT NULL,
+  `fone_Contatos` INT NOT NULL,
+  `email_Contatos` VARCHAR(45) NULL DEFAULT NULL,
+  `Endereco_Contatos` VARCHAR(100) NOT NULL,
+  `Ocupação_Contatos` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id_Contatos`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 13
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+-- -----------------------------------------------------
+-- Table `agenda`.`tb_evento`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `agenda`.`tb_evento` ;
+
+CREATE TABLE IF NOT EXISTS `agenda`.`tb_evento` (
+  `id_Evento` INT NOT NULL AUTO_INCREMENT,
+  `Evento_dia` DATE NULL DEFAULT NULL,
+  `Evento_Descricao` VARCHAR(200) NOT NULL,
+  `Evento_Endereco` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_Evento`))
